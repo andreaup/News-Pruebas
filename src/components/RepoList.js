@@ -5,7 +5,7 @@ const RepoList = ({ repos, hasError, isLoading }) => {
   if (hasError) {
     return (
       <div className="container">
-        <h6>Sorry! There was an error loading the repos.</h6>
+        <h6>Sorry! There was an error loading the news.</h6>
       </div>
     );
   }
@@ -17,10 +17,10 @@ const RepoList = ({ repos, hasError, isLoading }) => {
       </div>
     );
   }
-
+//needs style to format the news nik
   return (
     <div className="container">
-      {repos.map((repo, i) => (
+      { repos.map((repo, i) => (
         <div
           className="row border border-info rounded bg-light p-2 m-1"
           key={i}
@@ -42,7 +42,7 @@ const RepoList = ({ repos, hasError, isLoading }) => {
 RepoList.propTypes = {
   repos: PropTypes.array,
   hasError: PropTypes.bool,
-  isLoading: PropTypes.bool
+  isLoading: PropTypes.bool,
 };
 
 export default RepoList;

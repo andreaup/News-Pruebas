@@ -1,11 +1,10 @@
 import React from "react";
-import Search from "../containers/Search";
-import Repos from "../containers/Repos";
+import MainRouting from './MainRouting'
 
 const App = () => (
   <div>
-    <Search user="" />
-    <Repos />
+    
+    <MainRouting/>
   </div>
 );
 
