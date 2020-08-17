@@ -20,10 +20,9 @@ export const getRepos = (id) => {
     const date = `${new Date().getUTCFullYear()}-${new Date().getUTCMonth()}-${new Date().getUTCDay()}`
     let url = '';
     if (id === 0) 
-      url = `https://api.canillitapp.com/trending/2020-08-17/10`
+      url = `https://api.canillitapp.com/latest/2020-08-17`
     else
       url = `https://api.canillitapp.com/news/category/${id}`;
-console.log(url)
     fetch(url)
       .then((response) => {
         if (!response.ok) {
