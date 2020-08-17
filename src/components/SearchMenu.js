@@ -2,8 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import {data} from "../resources/numberCategories"
-/*
-*/
 
 const SearchMenu = ({ defaultUser, onGet }) => {
   onGet(data[defaultUser]);
@@ -11,12 +9,12 @@ const SearchMenu = ({ defaultUser, onGet }) => {
     <nav className="Categorias">
       <ul>
         <li>
-          <Link to={"/categories/home"}>
+          <Link to={"/home"}>
             <i className="fa fa-home fa-lg"></i> Home
           </Link>
         </li>
         <li>
-          <Link to={"/categories/politica"}>
+          <Link to={"/politica"}>
             <i className="fa fa-balance-scale fa-lg"></i> Política
           </Link>
         </li>
