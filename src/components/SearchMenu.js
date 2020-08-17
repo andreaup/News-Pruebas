@@ -21,29 +21,29 @@ const SearchMenu = ({ defaultUser, onGet }) => {
           </Link>
         </li>
         <li>
-          <Link to={"/categories/2"}>
+          <Link to={"/categories/internacional"}>
             <i className="fa fa-globe fa-lg "></i> Internacionales
           </Link>
         </li>
         <li>
-          <Link to={"/categories/3"}>
+          <Link to={"/categories/tecnología"}>
             <i className="fa fa-laptop fa-lg "></i> Tecnología
           </Link>
         </li>
         <li>
-          <Link to={"/categories/4"}>
+          <Link to={"/categories/espectáculos"}>
             <i className="fa fa-film fa-lg "></i> Espectáculos
           </Link>
         </li>
 
         <li>
-          <Link to={"/categories/5"}>
+          <Link to={"/categories/deportes"}>
             <i className="fa fa-futbol-o fa-lg "></i> Deportes
           </Link>
         </li>
 
         <li>
-          <Link to={"/categories/6"}>
+          <Link to={"/categories/diseño"}>
             <i className="fa fa-paint-brush fa-lg "></i> Diseño
           </Link>
         </li>
