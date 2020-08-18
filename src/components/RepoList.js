@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import moment from 'moment';
 
 const RepoList = ({ repos, hasError, isLoading }) => {
   if (hasError) {
@@ -17,7 +18,6 @@ const RepoList = ({ repos, hasError, isLoading }) => {
       </div>
     );
   }
-  //needs style to format the news nik
   return (
     <div className="container">
       {repos.map((repo) => (

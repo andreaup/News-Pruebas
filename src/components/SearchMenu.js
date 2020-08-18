@@ -24,7 +24,7 @@ const SearchMenu = ({ defaultUser, onGet }) => {
             </li>
             <li>
               <Link to={"/politics"}>
-                <i className="fa fa-balance-scale fa-lg"></i> Política
+                <i className="fa fa-gavel fa-lg"></i> Política
               </Link>
             </li>
             <li>
