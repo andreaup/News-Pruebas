@@ -1,9 +1,9 @@
 export const data = {
     home: 0,
-    politica: 1,
-    internacional: 2,
-    tecnología: 3,
-    espectáculos: 4,
-    deportes: 5,
-    diseño: 6
+    politics: 1,
+    international: 2,
+    tech: 3,
+    shows: 4,
+    sports: 5,
+    design: 6
 };
