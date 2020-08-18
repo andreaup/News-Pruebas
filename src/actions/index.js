@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 export const loadingError = (bool) => ({
   type: "LOADING_ERROR",
   hasErrored: bool,
@@ -17,10 +19,10 @@ export const getRepos = (id) => {
   return (dispatch) => {
     dispatch(loadingError(false));
     dispatch(loadingInProgress(true));
-    const date = `${new Date().getUTCFullYear()}-${new Date().getUTCMonth()}-${new Date().getUTCDay()}`
+    const date = moment().locale("es").format("YYYY-MM-DD");
     let url = '';
     if (id === 0) 
-      url = `https://api.canillitapp.com/latest/2020-08-17`
+      url = `https://api.canillitapp.com/latest/${date}`
     else
       url = `https://api.canillitapp.com/news/category/${id}`;
     fetch(url)
