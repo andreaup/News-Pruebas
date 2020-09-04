@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import moment from 'moment';
+import imgNotAvailable from '../images/No_Img_Avail.jpg'
 
-const RepoList = ({ repos, hasError, isLoading }) => {
+const RepoList = ({ articles, hasError, isLoading }) => {
   if (hasError) {
     return (
       <div className="container">
@@ -20,17 +21,17 @@ const RepoList = ({ repos, hasError, isLoading }) => {
   }
   return (
     <div className="container">
-      {repos.map((repo) => (
+      {articles.map((article) => (
         <div className="Card">
           <div className="images">
-            <img src={repo.img_url === null ? 'https://www.dia.org/sites/default/files/No_Img_Avail.jpg': repo.img_url}/>
+            <img src={article.img_url || imgNotAvailable} alt ="Article"/>
           </div>
           <div className="description">
-            <a href={repo.url}>
-              {repo.title}
+            <a href={article.url}>
+             <h3> {article.title}</h3>
             </a>
             <p>
-              <b>{repo.source_name}</b>
+              {article.source_name} | {moment(new Date(article.date)).locale('es').format('hh:mm')}
             </p>
           </div>
         </div>
@@ -40,7 +41,7 @@ const RepoList = ({ repos, hasError, isLoading }) => {
 };
 
 RepoList.propTypes = {
-  repos: PropTypes.array,
+  articles: PropTypes.array,
   hasError: PropTypes.bool,
   isLoading: PropTypes.bool,
 };

@@ -1,12 +1,12 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import Repos from "../containers/Repos";
+import Articles from "../containers/Articles";
 import Search from "../containers/Search";
 
 const redirectCategories = ({match})=>{
   return(<> 
   <Search user={match.params.id === undefined ? 'home': match.params.id} />
-  <Repos /> 
+  <Articles/> 
   </>)
 }
 

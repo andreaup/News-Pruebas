@@ -1,16 +1,16 @@
 import { connect } from 'react-redux'
-import { getRepos} from '../actions'
-import SearchMenu from '../components/SearchMenu'
+import { getArticles} from '../actions'
+import Menu from '../components/Menu'
 
 const mapStateToProps = (state, ownProps) => ({
   defaultUser: ownProps.user
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  onGet: (input) => dispatch(getRepos(input)),
+  onGet: (input) => dispatch(getArticles(input)),
 })
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(SearchMenu)
+)(Menu)

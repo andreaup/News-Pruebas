@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { data } from "../resources/numberCategories";
 
-const SearchMenu = ({ defaultUser, onGet }) => {
+const Menu = ({ defaultUser, onGet }) => {
   onGet(data[defaultUser]);
   return (
     <div className = "Header">
@@ -61,8 +61,8 @@ const SearchMenu = ({ defaultUser, onGet }) => {
   );
 };
 
-SearchMenu.propTypes = {
+Menu.propTypes = {
   onGet: PropTypes.func,
 };
 
-export default SearchMenu;
+export default Menu;

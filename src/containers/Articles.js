@@ -1,9 +1,9 @@
 import { connect } from 'react-redux'
-import RepoList from '../components/RepoList'
+import ArticleList from '../components/ArticleList'
 
 
 const mapStateToProps = state => ({
-  repos: state.repos,
+  articles: state.articles,
   hasError: state.loadingError,
   isLoading: state.loadingInProgress
 })
@@ -11,4 +11,4 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   null
-)(RepoList)
+)(ArticleList)

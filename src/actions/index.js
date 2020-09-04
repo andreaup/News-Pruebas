@@ -10,18 +10,18 @@ export const loadingInProgress = (bool) => ({
   isLoading: bool,
 });
 
-export const loadingSuccess = (repos) => ({
+export const loadingSuccess = (articles) => ({
   type: "LOADING_SUCCESS",
-  repos,
+  articles,
 });
 
-export const getRepos = (id) => {
+export const getArticles = (id) => {
   return (dispatch) => {
     dispatch(loadingError(false));
     dispatch(loadingInProgress(true));
     const date = moment().locale("es").format("YYYY-MM-DD");
     let url = '';
-    if (id === 0) 
+    if (id === 0) //home
       url = `https://api.canillitapp.com/latest/${date}`
     else
       url = `https://api.canillitapp.com/news/category/${id}`;
@@ -34,7 +34,10 @@ export const getRepos = (id) => {
         return response;
       })
       .then((response) => response.json())
-      .then((repos) => dispatch(loadingSuccess(repos)))
+      .then((articles) => 
+      {dispatch(loadingSuccess(articles.slice(0,10)))})
       .catch(() => dispatch(loadingError(true)));
   };
 };
+
+// .then((articles) => dispatch(loadingSuccess(articles.slice(0,10))))

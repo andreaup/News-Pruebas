@@ -18,17 +18,17 @@ const loadingInProgress = (state = false, action) => {
   }
 };
 
-const repos = (state = [], action) => {
+const articles = (state = [], action) => {
   switch (action.type) {
     case "LOADING_SUCCESS":
-      return action.repos;
+      return action.articles;
     default:
       return state;
   }
 };
 
 export default combineReducers({
-  repos,
+  articles,
   loadingError,
   loadingInProgress
 });

@@ -3,7 +3,6 @@ import MainRouting from './MainRouting'
 
 const App = () => (
   <div>
-    
     <MainRouting/>
   </div>
 );
