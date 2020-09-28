@@ -17,36 +17,27 @@ text-align: center;
 .Search {
   background: linear-gradient(
       0deg,
-      rgba(10, 10, 10, 0.4),
-      rgba(230, 207, 207, 0.6)
+      rgba(41, 49, 51, 0.4),
+      rgba(57, 168, 241, 0.6)
     ),
-    url(./images/header.jpg);
-  background-repeat: no-repeat;
+    url(./images/header-x1.png);
   background-size: cover;
-  background-position: 10% 25%;
-  min-height: 10vh;
+  background-position: 10% 10%;
+  min-height: 40vh;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-end;
+  width: 1300px;
+  height: 200px;
   color: white;
   border-radius: 10px;
-  text-align: left;
   padding: 20px;
 }
-input {
-  font-size: 14px;
-  font-family: "Verdana", sans-serif;
-  padding: 0.4em 1.4em 0.3em 0.8em;
-  width: 200px;
-  height: 20px;
-  border: 2px solid rgb(233, 223, 223);
-  border-radius: 10px;
-}
+
 .Categorias {
   width: 90%;
   border-radius: 10px;
   display: inline-block;
-  background-color: rgba(86, 6, 88, 0.63);
+  background-color: rgba(17, 17, 17, 0.445);
   color: #ffffff;
   justify-content: center;
   text-align: center;
@@ -63,7 +54,7 @@ input {
   border-right: 1px solid #fff;
 }
 .Categorias li:hover {
-  background: rgba(221, 161, 223, 0.63);
+  background: rgba(87, 199, 243, 0.63);
   border-radius: 7px;
 }
 
@@ -112,3 +103,11 @@ img {
   height: 200px;
   border-radius: 10px;
 }
+/* .button-search{
+  width: 35px;
+  height: 35px;
+  background-color: rgba(86, 6, 88, 0.63);
+  border: 1px;
+  border-radius: 10px;
+  color: white;
+} */
