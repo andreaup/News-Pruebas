@@ -11,6 +11,7 @@ const RepoList = ({ repos, hasError, isLoading }) => {
     );
   }
 
+
   if (isLoading) {
     return (
       <div className="container">
@@ -23,7 +24,7 @@ const RepoList = ({ repos, hasError, isLoading }) => {
       {repos.map((repo) => (
         <div className="Card">
           <div className="images">
-            <img src={repo.img_url === null ? 'https://www.dia.org/sites/default/files/No_Img_Avail.jpg': repo.img_url}/>
+            <img alt="" src={repo.img_url === null ? 'https://www.dia.org/sites/default/files/No_Img_Avail.jpg': repo.img_url}/>
           </div>
           <div className="description">
             <a href={repo.url}>
