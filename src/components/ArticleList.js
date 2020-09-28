@@ -12,6 +12,7 @@ const RepoList = ({ articles, hasError, isLoading }) => {
     );
   }
 
+
   if (isLoading) {
     return (
       <div className="container">
